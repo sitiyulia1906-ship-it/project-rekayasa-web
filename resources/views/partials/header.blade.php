@@ -13,6 +13,9 @@
           <a class="nav-link {{ Request::is('profile') ? 'active' : '' }}" href="{{ url('/profile') }}">Profile</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link {{ Request::is('project*') ? 'active' : '' }}" href="{{ url('/project') }}">Project</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{ url('/about') }}">About</a>
         </li>
       </ul>

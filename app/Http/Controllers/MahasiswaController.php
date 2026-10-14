@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Mahasiswa;
+use App\Models\Project; 
 
 class MahasiswaController extends Controller
 {
@@ -17,6 +18,11 @@ class MahasiswaController extends Controller
             'status' => 'aktif',
         ];
 
-        return view('mahasiswa', compact('mahasiswa'));
+        
+        $projects = Project::paginate(5);
+
+       
+
+        return view('page.profile', compact('mahasiswa', 'projects'));
     }
 }
