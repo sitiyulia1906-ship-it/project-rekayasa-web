@@ -2,92 +2,108 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Project; // Pastikan model Project di-import
+use App\Models\Product; 
 
-class ProjectSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        $projects = [
+        $data = [
             [
-                'title' => 'Sistem Informasi Akademik',
-                'description' => 'Aplikasi berbasis web untuk pengelolaan data mahasiswa, jadwal kuliah, dan nilai akademik.',
-                'teknologi' => 'Laravel & Bootstrap',
-                'image' => 'project1.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Pelet Jitu Umpan Ikan',
+                'merek'       => 'Jitu',
+                'kategori'    => 'Umpan',
+                'harga'       => 5000,
+                'stok'        => 50,
+                'deskripsi'   => 'Umpan pelet siap pakai serbuk instan aroma amis gurih untuk ikan mas, bawal, dan patin.',
+                'gambar'      => 'image/jitu.jpeg',
             ],
             [
-                'title' => 'E-Commerce SEO Optimization',
-                'description' => 'Optimalisasi struktur heading, meta tags, dan indexing halaman web toko online.',
-                'teknologi' => 'PHP & Google Search Console',
-                'image' => 'project2.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Deho Ikan Tuna dalam Minyak',
+                'merek'       => 'Deho',
+                'kategori'    => 'Umpan / Olahan',
+                'harga'       => 18000,
+                'stok'        => 30,
+                'deskripsi'   => 'Berat bersih 180g, tuna chunk in oil berkualitas tinggi untuk campuran umpan.',
+                'gambar'      => 'image/deho.jpeg',
             ],
             [
-                'title' => 'Redesign Cover & Branding',
-                'description' => 'Perancangan elemen grafis personal branding dan desain sampul buku rekayasa perangkat lunak.',
-                'teknologi' => 'Adobe Illustrator & Photoshop',
-                'image' => 'project3.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Joran Shimano Bassterra EV GS S60M',
+                'merek'       => 'Shimano',
+                'kategori'    => 'Joran',
+                'harga'       => 650000,
+                'stok'        => 6,
+                'deskripsi'   => 'Joran spinning berkualitas tinggi lengkap dengan sarung kain biru original Shimano.',
+                'gambar'      => 'image/joran.jpeg',
             ],
             [
-                'title' => 'Aplikasi Kasir (POS) UMKM',
-                'description' => 'Sistem Point of Sale untuk pencatatan transaksi harian, stok barang, dan laporan laba rugi.',
-                'teknologi' => 'Vue.js & Laravel REST API',
-                'image' => 'project4.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Pelampung Pancing Berbagai Ukuran',
+                'merek'       => 'Local / Various',
+                'kategori'    => 'Aksesoris',
+                'harga'       => 4000,
+                'stok'        => 100,
+                'deskripsi'   => 'Pelampung kayu dan plastik sensitif berbagai bentuk dan warna.',
+                'gambar'      => 'image/antiB.jpeg',
             ],
             [
-                'title' => 'Company Profile PT Maju Mundur',
-                'description' => 'Website profil perusahaan modern dengan fitur multi-bahasa dan form kontak interaktif.',
-                'teknologi' => 'Tailwind CSS & Alpine.js',
-                'image' => 'project5.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Top Guide CGS (Cyclone Guide System)',
+                'merek'       => 'Daido',
+                'kategori'    => 'Sparepart Joran',
+                'harga'       => 25000,
+                'stok'        => 25,
+                'deskripsi'   => 'Anti keriting, ring guide ekstra tebal dengan frame stainless steel dan ceramic zirconia.',
+                'gambar'      => 'image/cgs.jpeg',
             ],
             [
-                'title' => 'Aplikasi Mobile Absensi GPS',
-                'description' => 'Aplikasi absensi karyawan berbasis android dengan validasi titik lokasi GPS dan foto selfie.',
-                'teknologi' => 'Flutter & Firebase',
-                'image' => 'project6.jpg',
-                'status' => 'dalam proses',
+                'nama_produk' => 'Senar Owner Broad Monofilament',
+                'merek'       => 'Owner',
+                'kategori'    => 'Senar',
+                'harga'       => 75000,
+                'stok'        => 20,
+                'deskripsi'   => 'Fluorine treated tournament line ukuran 0.18 mm, panjang 150m.',
+                'gambar'      => 'image/snr.jpeg',
             ],
             [
-                'title' => 'Dashboard Monitoring IoT',
-                'description' => 'Sistem pemantauan suhu dan kelembapan ruangan secara real-time menggunakan sensor ESP32.',
-                'teknologi' => 'Node.js, MQTT & React',
-                'image' => 'project7.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Joran Exori Tegeg 270',
+                'merek'       => 'Exori',
+                'kategori'    => 'Joran',
+                'harga'       => 195000,
+                'stok'        => 10,
+                'deskripsi'   => 'Joran tegeg / antena panjang 2.70 meter dengan motif ukiran etnik elegan.',
+                'gambar'      => 'image/tegeg.jpeg',
             ],
             [
-                'title' => 'Learning Management System (LMS)',
-                'description' => 'Platform e-learning untuk manajemen kursus online, kuis interaktif, dan sertifikat otomatis.',
-                'teknologi' => 'Laravel & Livewire',
-                'image' => 'project8.jpg',
-                'status' => 'dalam proses',
+                'nama_produk' => 'Pemberat / Timah Stopper Glory',
+                'merek'       => 'Glory',
+                'kategori'    => 'Aksesoris',
+                'harga'       => 10000,
+                'stok'        => 60,
+                'deskripsi'   => 'Timah / pemberat pancing siap pakai dalam kemasan sachet per pack.',
+                'gambar'      => 'image/stoper.jpeg',
             ],
             [
-                'title' => 'Landing Page Produk Skincare',
-                'description' => 'Halaman pemasaran produk kecantikan yang dioptimasi untuk konversi penjualan tinggi.',
-                'teknologi' => 'HTML5, CSS3 & JavaScript',
-                'image' => 'project9.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Kotak Aksesoris Pancing',
+                'merek'       => 'TaffSPORT',
+                'kategori'    => 'Kotak Pancing',
+                'harga'       => 35000,
+                'stok'        => 15,
+                'deskripsi'   => 'Kotak penyimpanan portabel hitam serbaguna untuk kail, swivel, dan aksesoris kecil.',
+                'gambar'      => 'image/ktk kail.jpeg',
             ],
             [
-                'title' => 'Aplikasi Manajemen Keuangan Pribadi',
-                'description' => 'Pencatatan pemasukan dan pengeluaran finansial bulanan dilengkapi grafik analitik.',
-                'teknologi' => 'React Native & SQLite',
-                'image' => 'project10.jpg',
-                'status' => 'selesai',
+                'nama_produk' => 'Reel Shikari Fluvie 3000',
+                'merek'       => 'Shikari',
+                'kategori'    => 'Reel',
+                'harga'       => 210000,
+                'stok'        => 8,
+                'deskripsi'   => 'Reel spinning profesional fishing gear tersedia varian warna menarik.',
+                'gambar'      => 'image/rell.jpeg',
             ],
         ];
 
-        foreach ($projects as $project) {
-            Project::create($project);
+        foreach ($data as $item) {
+            Product::create($item);
         }
     }
 }
